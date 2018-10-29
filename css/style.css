@@ -1,0 +1,846 @@
+
+/*========= incia universal ===== */ 
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 0;margin: 0;
+font-family: 'Montserrat', sans-serif; text-decoration: none; }
+
+a:hover{text-decoration: none;}
+
+/*========= incia barra scroll ===== */ 
+::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F29200;}
+::-webkit-scrollbar{width: 8px;background-color: #F29200;}
+::-webkit-scrollbar-thumb{background-color: #E53C19;}
+
+
+
+/*=======rayita========*/
+
+#raya{width: 100%;display:flex;margin-bottom: 60px;
+position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;
+flex-direction: row; justify-content: space-around; overflow: hidden;}
+
+#raya div{width: 100px; height: 4px; border-radius:3px; 
+background: #DF4312; /* For browsers that do not support gradients */background: -webkit-linear-gradient(left, #F29200 , #DF4312); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #F29200, #DF4312); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #F29200, #DF4312); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #F29200 , #DF4312); /* Standard syntax */}
+
+
+/* ========== titulos ===========*/
+
+h2#titulo{width: 100%; font-size: 1.4rem; font-weight: 400; margin-bottom: 10px; text-align: center;margin-top: 0;}
+h2#titulo span{font-weight: 600;}
+
+
+/*=======flecha para subir========*/
+span.ir-arriba { display: none; overflow: hidden; width: 35px;height: 60px;cursor: pointer;bottom: 50px;right: 1.5%;position: fixed;text-align: center;z-index: 200;}
+
+
+
+/*======= texturas ========*/
+/*div#texturapunto  {background: url(../img/dot.png) repeat;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index:21;}*/
+div#texturacolor  {background-color: rgba(0,0,0,0.55);position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 20;}
+
+
+/*carrusel */
+
+
+
+/* ======= incia header===========*/
+	div#head {width: 100%; padding: 30px 10%; background-color: white; display:flex; 
+	position: fixed; top: 0; z-index: 123; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap; 
+	flex-direction: row; justify-content: space-between; overflow: hidden; font-size: 0; 
+    box-shadow: 1px 5px 10px rgba(125, 125, 125, 0.49);}
+
+
+	div#head .logo{width: 30%; position: relative;}
+	div#head .logo img{width: 50%; max-width: 163px; max-height: 80px; min-width: 161px; min-height: 78px; }
+	div#head nav {width: 65%;padding-top: 48px;}
+
+	nav ul li {list-style: none; width: 20%; font-size: 0.9rem; display: inline-block;
+	color: #DF4312; text-align: center;font-weight: 600; transition: 0.4s;}
+
+	nav ul li:hover{color: #231f20; transition: 0.4s;}
+
+
+	div#head .logo .menu_responsive{width: 40px; height: 55px; position: absolute;
+	right: 0; top: 28px; font-size: 1.3rem; font-weight: 800; text-align: center; cursor: pointer; color: #0a0a0a;}
+
+	div.linea_a{width: 30%; height: 4px;background-color:#f29200; margin-bottom: 3px; transition: 0.4s ease;}
+	div.linea_b{width: 80%; height: 4px;background-color:#f29200; margin-bottom: 3px; transition: 0.4s ease;}
+	div.linea_c{width: 40%; height: 4px;background-color:#f29200; margin-bottom: 3px; transition: 0.4s ease;}
+	div.linea_d{width: 90%; height: 4px;background-color:#f29200; margin-bottom: 3px; transition: 0.4s ease;}
+	div.linea_e{width: 70%; height: 4px;background-color:#f29200; margin-bottom: 3px; transition: 0.4s ease;}
+
+	.menu_responsive:hover div.linea_a {width: 100%; transition: 0.4s ease; background-color: #0a0a0a; }
+	.menu_responsive:hover div.linea_b {width: 100%; transition: 0.4s ease; background-color: #0a0a0a; }
+	.menu_responsive:hover div.linea_c {width: 100%; transition: 0.4s ease; background-color: #0a0a0a; }
+	.menu_responsive:hover div.linea_d {width: 100%; transition: 0.4s ease; background-color: #0a0a0a; }
+	.menu_responsive:hover div.linea_e {width: 100%; transition: 0.4s ease; background-color: #0a0a0a; }
+
+/* ======= termina header===========*/
+
+/*=== inicia menu_responsive =====*/
+	section#nav_movil {position: absolute; right: -200% ;top: 0; transition: right .7s ease-in-out;
+	position: fixed;padding-top: 30px;background: url(../img/dot.png) repeat; height: 100%;width: 100%;
+	background-color: rgba(0,0,0,0.8);padding-left: 10%;padding-right: 10%;padding-top: 100px; z-index: 99999999;}
+
+	section#nav_movil div.cerrar {position: absolute;right: 30px;top: 20px; text-align: center;
+	padding: 10px;cursor: pointer; }
+
+	section#nav_movil div.cerrar span {font-size: 1.2rem;color: white;}
+
+	section#nav_movil div.empresa_redes_contacto {width: 100%;display: flex;display: -webkit-flex;
+	display: -ms-flexbox;flex-wrap: wrap;flex-direction: row; justify-content: space-around;}
+
+	section#nav_movil div.empresa_redes_contacto ul li {display: inline-block; color: white;}
+
+	section#nav_movil div.empresa_redes_contacto ul li span {display: inline-block; font-size: 1.2rem;color: white;
+	list-style: none; margin-right: 10px;}
+
+	#nav_nuevo {position: absolute;top: 0;right: 0;height: 100%;width: 100%;
+	padding: 80px 40px;background: #000000; max-width: 470px;}
+
+	#nav_nuevo ul {margin-bottom: 20px; padding: 0; }
+	#nav_nuevo ul li span { font-size: 0.9rem; color: white; margin-right: 5px; }
+	#nav_nuevo ul li {text-align: center; list-style: none; margin-bottom: 10px;}
+	#nav_nuevo ul li a {color: white; font-size: 1.1rem;     font-family: 'Lato', sans-serif;}
+	#nav_nuevo img { margin-bottom: 40px; margin-top: 10px; width: 20%; margin-left: 40%; display: none;}
+/*==== termina menu_responsive =====*/
+
+/* ======= incia nosotros===========*/
+	.nosotros {width: 100%;  padding: 60px 10% 60px 10%; background-color: white; display:flex; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around; overflow: hidden; font-size: 0.8rem;text-align: justify;}
+
+	.nosotros p{margin-bottom: 60px;line-height: 1.5rem;}
+
+	.nosotros ul {padding-left: 0;}
+
+	.nosotros ul li.boton{margin-top: 55px; list-style: none;}
+
+	#boton_2 {font-size: 0.8rem; font-weight: 400; color: #3D3C3F; padding: 5px 45px; border-radius: 3px;
+	background: #DF4312; /* For browsers that do not support gradients */background: -webkit-linear-gradient(left, #F29200 , #DF4312); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #F29200, #DF4312); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #F29200, #DF4312); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #F29200 , #DF4312); /* Standard syntax */color: white; text-decoration: none; }
+/* ======= termina nosotros===========*/
+
+
+/* ======= incia services ===========*/
+
+	.services {width: 100%; padding: 60px 5% ;background-color: white; display:flex; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around; overflow: hidden; font-size: 0.8rem;text-align: justify;}
+
+	.service{width: 24%; height: 400px;font-weight: 400; background-color:white; border: 1px solid #c3c3c3;
+	font-size: 0.9rem;color: #1f1f1f; padding: 30px 20px ; transition: 0.2s ease-in-out; position: relative;-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		   -moz-box-shadow: 0 15px 10px -8px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(250, 250, 250, 0), 0 0 40px rgba(250, 250, 250, 0) inset;
+				box-shadow: 0 15px 10px -8px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(250, 250, 250, 0), 0 0 40px rgba(250, 250, 250, 0) inset;}
+
+
+	.service a {color: #1f1f1f;}
+	.service ul { margin-top:0;  margin-bottom: 0;list-style: none;padding-left: 0; }
+	.service ul li{text-decoration: none; list-style: none; text-align: center; }
+	.service ul li span {font-size: 2.3rem; color: #E53C19; font-weight: 400;}
+
+	.service h2 {color: #1f1f1f; font-weight: 400; font-size: 1.05rem; text-align: center;  margin-bottom: 30px;margin-top: 25px;}
+
+	.service ul li.boton{margin-top: 50px;}
+
+	.service p {line-height: 1.1rem;}
+
+	#boton {font-size: 0.8rem; font-weight: 400; color: #e53c19; padding: 5px 45px; border-radius: 3px; }
+
+	#mas_servicios{width: 31%;}
+
+	.service:hover{background-color: #f3f3f3; transition: 0.2s ease-in-out; transform: scale(1.04); position: relative; z-index: 15; }
+
+
+	.service:hover #boton {background: #DF4312; /* For browsers that do not support gradients */background: -webkit-linear-gradient(left, #F29200 , #DF4312); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #F29200, #DF4312); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #F29200, #DF4312); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #F29200 , #DF4312); /* Standard syntax */color: white; text-decoration: none; border: 	none;}
+/* ======= termina services ===========*/
+
+
+/* ======= incia franja===========*/
+	section.franja {width: 100%;  position: relative; color: white; background: #DF4312; /* For browsers that do not support gradients */background: -webkit-linear-gradient(left, #F29200 , #DF4312); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #F29200, #DF4312); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #F29200, #DF4312); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #F29200 , #DF4312); /* Standard syntax */ padding: 20px 10%; margin-bottom: 60px; margin-top: }
+
+	section.franja h2{width: 100%; font-size: 1.5rem; font-weight: 400; margin-bottom: 20px; margin-top: 20px; text-align: center; }
+	section.franja h2 span{font-weight: 600;}
+
+
+	.img_franja { width:100%; height: 300px; background-image: url("../img/franja_2017.jpg"); overflow: hidden; background-attachment: fixed; right: 0; background-repeat: no-repeat; background-size: cover;margin: 0 auto;  
+	overflow: hidden; padding: 0; position: relative; }
+/* ======= termina franja===========*/
+
+
+
+/* ======= incia mapa===========*/
+
+	div#mapa{width: 100%;overflow: hidden; height: 350px; position: relative;}
+	div#mapa img{width: 100%; position: absolute; top: 0; right: 0; }
+	
+	#info_mapa{width: 100%; max-width: 450px; padding: 50px 30px; padding-left: 70px; margin-top: 45px; 
+	background-color: rgba(255,255,255,0.8); position: relative; z-index: 22; margin-left: 10%; border-bottom: 5px solid #f29200}
+
+	#info_mapa h4 {font-size: 0.8rem; margin-top: 0; margin-bottom: 0px; }
+	#info_mapa h1 {font-size: 3rem; margin-top: 0; margin-bottom: 0px;color: #df4312;}
+	#info_mapa h2 {font-size: 1.1rem; margin-top: 0; margin-bottom: 0px;}
+	#info_mapa h2 span.distrito {font-size: 0.8rem; }
+/* ======= termina mapa===========*/
+
+
+/* ======= incia formulario ==========*/
+
+
+	footer {width: 100%; background-color: #1f1f1f;display:flex; 
+	display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap; 
+	flex-direction: row; justify-content: space-between; overflow: hidden;  
+	font-size: 0.9rem;padding: 20px;}
+
+	footer .redes{width: 50%;padding-left: 10%; padding-right: 10%; }
+
+	footer .redes ul {padding-left: 0;margin-top: 40px; margin-bottom: 0; text-align: right	;list-style: none;}
+	footer .redes ul li {display: inline; color: white; font-size: 1.3rem; color: white;}
+	footer .redes ul li span {color: white; padding: 10px;}
+	footer .redes ul li span:hover {color: #df4312;}
+
+	footer .redes img{width: 100%; display: inline-block; max-width: 163px;
+    max-height: 80px;}
+
+	section.contact {width: 100%; height: auto; position: relative;
+	display:flex; display:-webkit-flex; display:-ms-flexbox; 
+	flex-wrap:  wrap;flex-direction: row; 
+	justify-content: space-around; overflow: hidden; color: white;}
+
+	.formulario_2017 {width: 60%;color: #1f1f1f; font-size: 1.4rem; padding-top: 60px; padding-bottom: 60px; padding-left: 10%; background-color: white; padding-right: 60px; }
+	.formulario_2017 h3{margin-top: 0;font-size: 1.4rem; font-weight: 600;}
+
+	.franja_datos{width: 40%;padding: 60px 10% 60px 0;display:flex; display:-webkit-flex; display:-ms-flexbox; 
+	flex-wrap:  wrap;flex-direction: row; 
+	justify-content: space-between;}
+
+	.franja_datos div {width: 100%; margin-bottom: 20px;padding-bottom: 10px; color: 	#1f1f1f;}
+	.franja_datos h4{font-size:1.1rem;margin-top:0; margin-bottom:10px;color: #df4312}
+	.franja_datos ul{padding-left: 	0;margin-top: 	0; margin-bottom: 	0;}
+	.franja_datos ul li{list-style:none; font-size: 	0.9rem;}
+	.franja_datos ul li span{font-weight: 900;}
+	
+
+	.franja_datos h4 span{margin-right: 	5px; font-size: 	1.4rem;color: #df4312}	
+
+	section.contact label {font-size: 0.9rem; color: #1f1f1f;}
+	section.contact input {    border: 1px solid #e3e2e7; padding: 4px;font-size: 0.9rem;     border-radius: 0.5rem;background-color: #f6f6f6;}
+	section.contact  textarea {    border: 1px solid #e3e2e7;border-radius: 0.9rem;background-color: #f3f3f3; width: 100%; padding: 4px ;font-size: 0.9rem;}
+
+	.contact section.contact_img { width: 100%; position: absolute; left: 0px ; top: 0; animation: moverFondo 500s linear infinite alternate ;}
+	.contact section.contact_img img{width: 700%;}
+
+	@keyframes moverFondo {
+
+		0% { transform: translateX(-6000px);}
+
+		100% {transform: translateX(7000px));}}
+
+
+	.contact section.contact_form { width: 100%; max-width: 450px;
+	padding: 40px 5%; position: relative; z-index: 30; background-color: #df4312;
+	background-size: 130% ;background-repeat: no-repeat; right: 0;}
+
+	.contact section.contact_form h3 {font-size: 2.5rem; margin-top: 0; margin-bottom: 20px;}
+
+
+/*==== termina formulario =====*/
+
+
+
+
+/* ======= incia titulos principales===========*/
+	#titulos_principales {overflow: hidden; margin-top: 140px; width: 100%; height: 250px; position: relative; color: white; 
+	padding: 20px 10%;}
+
+
+	.imagen_efecto{transition: 9s; overflow: hidden; width: 100%; height:100%; position: absolute; left:0; top: 0;z-index: 2; animation: moverNubes 15s linear infinite alternate ;}
+
+	.imagen_efecto img {width: 100%; }
+
+	@keyframes moverNubes {
+
+		from {transform: scale(1.4);}
+
+		 to {transform: scale(1));}}
+
+
+	.fondo_transparente{display: none; width: 100%; height: 100%; background-image: url(../img/fondo_transparente.png);    background-attachment: fixed;
+	background-repeat: no-repeat;background-size: cover; position: absolute; left:0; top: 0;z-index: 3;}
+
+
+
+	#titulos_principales h2{width: 100%; font-size: 2.5rem; position: relative; z-index: 5; font-weight: 400;margin-top: 70px; text-align: center;}
+	#titulos_principales h2 span{font-weight: 600; position: relative; z-index: 5; }
+/* ======= termina titulos principales ==========*/
+
+
+
+
+
+/* ======= inicia estructura ===========*/
+
+	#estructura_b {width: 100%;  padding: 60px 10% 0px 10%; display:flex; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around; overflow: hidden; font-size: 0.8rem;text-align: justify;}
+
+	#estructura_b #b_1 {width: 48%;    margin-bottom: 60px;}
+	
+	#estructura_b #b_1 p{margin-bottom: 80px;line-height: 1.5rem;}
+/* ======= termina estructura ===========*/
+
+
+
+
+/* ======= inicia estructura nosotros ===========*/
+	
+	#primera_estructura{width: 100%; padding: 60px 5%; height: auto; position: relative;
+	display:flex; display:-webkit-flex; display:-ms-flexbox; 
+	flex-wrap:  wrap;flex-direction: row;align-items: center; 
+	justify-content: space-around; overflow: hidden; color: white;}
+	
+	#primera_a_img{width: 48%;}
+	#primera_a_parrafo{width: 48%;}
+	#primera_a_parrafo p{text-align: justify; margin-top: 0; margin-bottom: 0; font-size: 0.9rem; color: #1f1f1f; font-weight: 400;}
+	#primera_a_img img{width: 100%; max-width: 587px;}
+
+
+
+	#estructura_nosotros{width: 100%; padding: 60px 5%; height: auto; position: relative;
+	display:flex; display:-webkit-flex; display:-ms-flexbox; 
+	flex-wrap:  wrap;flex-direction: row; 
+	justify-content: space-between; overflow: hidden; color: white;}
+	
+
+	#treinta{width: 30%;color: #1f1f1f;font-weight: 400; font-size: 0.9rem;}
+	#treinta h2 {width: 100%;font-size: 2rem;font-weight: 400;
+    margin-bottom: 10px;text-align: center;margin-top: 0;}
+    #treinta h2 span{font-weight: 600;}
+    #treinta p{text-align: justify; margin-top: 0; margin-bottom: 0; font-size: 0.9rem; color: #1f1f1f; font-weight: 400; margin-bottom: 0; margin-top: 0;}
+	
+    #setenta{width: 60%;color: #1f1f1f;font-weight: 400; font-size: 0.9rem;}
+
+
+
+
+
+	#circulo_grafico { position: relative; width: 100%;text-align: center;  max-width: 620px; margin: 0 auto}
+	#circulo_grafico img{width: 100%;}
+	.cir_central {width: 26%; margin: 0 auto; padding-top: 180px; padding-bottom: 180px;position: relative; z-index: 10;}
+	.cir_ceo{ cursor: pointer; width: 15%;position: absolute; left: 0; top: 24%; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculos 1s linear infinite alternate;}
+	.cir_programador{ cursor: pointer; width: 20%;position: absolute; right:  0; bottom: 15%; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculosx 1s linear infinite alternate;animation-delay: .5s;}
+	.cir_planner{ cursor: pointer; width: 20%;position: absolute; left: 30%; top: 10px; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculos 1s linear infinite alternate;}
+	.cir_analista{ cursor: pointer; width: 25%;position: absolute; right: 10%; ; top: 5px; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculosx 1s linear infinite alternate;animation-delay: .5s;}
+	.cir_ux	{ cursor: pointer; width: 25%;position: absolute; left: 35%; bottom: -5%; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculos 1s linear infinite alternate;}
+	.cir_diseñador{ cursor: pointer; width: 20%;position: absolute; left: 5%; bottom: 25%; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculosx 1s linear infinite alternate;animation-delay: .5s;}
+	.cir_gestor{ cursor: pointer; width: 20%;position: absolute; right:  0; bottom: 44%; transition: 0.4s ease-in-out; z-index: 5;animation: subircirculos 1s linear infinite alternate;}
+	
+
+	@keyframes subircirculos {
+		0% {
+			transform: scale(1.03);
+		}
+
+		100% {
+			transform: scale(0.9);
+		}
+	}
+
+
+	@keyframes subircirculosx {
+		0% {
+			transform: scale(1.08);
+		}
+
+		100% {
+			transform: scale(0.8);
+		}
+	}
+
+	/*
+	.cir_ceo:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	.cir_programador:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	.cir_planner:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	.cir_analista:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	.cir_ux:hover {transform: scale(1.1); transition: 0.4s ease-in-out}	
+	.cir_diseñador:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	.cir_gestor:hover {transform: scale(1.1); transition: 0.4s ease-in-out}
+	
+	*/
+
+	.cuadradito_planner{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;top: 30%;
+    left: 24%;transform: rotate(75deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_ceo{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;top: 39%;
+    left: 6%;transform: rotate(20deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_diseñador{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;bottom: 43%;
+    left: 14%;transform: rotate(150deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_ux{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;bottom: 29%;
+    left: 28%;transform: rotate(95deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_programador{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;bottom: 37%;
+    right:10%;transform: rotate(30deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_gestor{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;bottom: 54%;
+    right:10%;transform: rotate(-2deg);  transition: 0.4s ease-in-out;}
+
+    .cuadradito_analista{width: 40%;height: 1.5px;background-color: #f29200;position: absolute;top: 30%;
+    right:14%;transform: rotate(130deg);  transition: 0.4s ease-in-out;}
+	
+
+    #circulo_2017 .cir1 {position: absolute; width: 25%; top: 0; left: 38%;transition: 0.4s ease-in-out;}
+	#circulo_2017 .cir1 img{width: 100%;}
+
+	#circulo_2017 .cir2 {position: absolute; width: 25%; bottom:17%; right: 8%;transition: 0.4s ease-in-out;}
+	#circulo_2017 .cir2 img{width: 100%;}
+
+	#circulo_2017 .cir3 {position: absolute; width: 25%; bottom: 17%; left: 8%;transition: 0.4s ease-in-out;}
+	#circulo_2017 .cir3 img{width: 100%;}
+
+	#circulo_2017{width: 100%; margin: 0 auto;position: relative; max-width: 710px;}
+	#circulo_2017 img#circulo_central {width: 100%; animation: movercirculos 0.5s linear infinite alternate;}
+
+	#circulo_2017 .cir3:hover{transform: scale(1.05); transition: 0.4s ease-in-out;}
+	#circulo_2017 .cir2:hover{transform: scale(1.05); transition: 0.4s ease-in-out;}
+	#circulo_2017 .cir1:hover{transform: scale(1.05); transition: 0.4s ease-in-out;}
+
+	@keyframes movercirculos {
+		0% {
+			transform: rotateZ(360deg);
+		}
+	}
+/* ======= termina estructura nosotros===========*/
+
+
+
+
+/* ===== SUB SERVICIOS 4 ========= */
+
+	.servicios_4 {width: 100%; display: flex; height: 550px;
+	position: relative;display: -webkit-flex;display: -ms-flexbox; overflow: hidden;
+	flex-wrap: wrap;flex-direction: row;flex-direction:row-reverse; justify-content: space-around;}
+
+	.servicios_4 .sub_datos{width: 65%; position: relative;}
+	.sub_datos .sub_principal {width: 100%; height: auto;}
+
+	#caja_1,#caja_2,#caja_3,#caja_4{left: 0%; transition: 0.4s ease-in-out}
+	.sub_datos .sub_info{width: 100%; height: 350px; background-color: white;padding: 20px;}
+	.sub_datos .sub_info p {font-size: 0.9rem; color: #3d3c3f;}
+
+	.sub_datos .sub_img{width: 100%; height: 200px; padding: 20px; background-color:#fbfbfb;display: -webkit-flex;display: -ms-flexbox;
+	flex-wrap: wrap;flex-direction: row;justify-content: space-around;align-items: center; position: relative;overflow: hidden;}
+	.sub_datos .sub_img img{width: 100%; position: absolute; left: 0; top: 0;}
+	.sub_datos .sub_img h2{margin: 0 auto; font-size: 1.5rem; color: white; margin-top: 0; margin-bottom: 10px; text-align: center;font-weight: 600; position: relative;z-index:35; text-align: center;line-height: 2rem; margin-bottom: 0;}
+	.sub_datos .sub_img h2 span{font-weight: 400;}
+
+
+
+	.servicios_4 .sub_menu{width: 35%; height: 100%;background-color: #f29200; overflow: hidden;display: -webkit-flex;display: -ms-flexbox;
+	flex-wrap: wrap;flex-direction: row;justify-content: space-around;align-items: center;}
+	.sub_menu .sub_botones {width: 100%; height: 25%;padding: 20px; background-color:#fbfbfb;display: -webkit-flex;display: -ms-flexbox;
+	flex-wrap: wrap;flex-direction: row;justify-content: space-around;align-items: center; border-bottom: .3px solid #d1d1d1; cursor: pointer;transition: 0.2s ease-in-out; }
+
+	.sub_menu .sub_botones:hover{background-color: #df4312;padding-top: 30px; transition: 0.2s ease-in-out;}
+	.sub_menu .sub_botones:hover h2 {color: white;}
+	.sub_menu .sub_botones h2 {font-size: 0.9rem; margin-top: 0; margin-bottom: 0; color: #3d3c3f; font-weight: 600; text-align: center;}
+	.sub_menu .sub_botones h2 span {font-weight: 400; }
+
+	#mas{font-size: 1rem; color: #3d3c3f;}
+	.sub_menu .sub_botones:hover #mas {color: white;}
+	.sub_menu .botones_3:hover #mas {color: white;}
+
+
+	.imagen_larga{position: relative; width: 100%; height: 250px; overflow: hidden;}
+	.imagen_larga img {width: 100%; transition: 0.4s ease-in-out;position: relative;left: 0; top: 0;}
+	.imagen_larga img:hover {transform: scale(1.1); transition: 0.4s ease-in-out;}
+
+	.sub_menu .botones_3 {width: 100%; height: 33.3333%;padding: 20px; background-color:#fbfbfb;display: -webkit-flex;display: -ms-flexbox;
+	flex-wrap: wrap;flex-direction: row;justify-content: space-around;align-items: center; border-bottom: .3px solid #f9f8f8; cursor: pointer; transition: 0.2s ease-in-out;}
+	.sub_menu .botones_3:hover{background-color: #df4312;padding-top: 30px; transition: 0.2s ease-in-out;}
+	.sub_menu .botones_3:hover h2 {color: white;}
+	.sub_menu .botones_3 h2 {font-size: 0.9rem; margin-top: 0; margin-bottom: 0; color: #3d3c3f; font-weight: 600; text-align: center;}
+	.sub_menu .botones_3 h2 span {font-weight: 400;}
+/* ===== termina SUB SERVICIOS 4 ========= */
+
+
+/* ======= incia proyetos ===========*/
+
+	#proyectos {width: 100%;  padding: 60px 15% ; display:flex; height: auto; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around; overflow: hidden; font-size: 0.9rem;text-align: justify;}
+
+	#proyect {width: 30%;}
+	#proyect_2 {width: 100%; display:flex; height: auto; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around; overflow: hidden; font-size: 0.9rem;}
+	#proyect_2 .mediano {position:relative; -webkit-transition: all .25s ease-in-out; overflow: hidden; width: 30%; border-radius: 10px; height: 310px;margin-top: 20px; margin-bottom: 20px;}
+	#proyect_2 .mediano img {width: 100%; position: absolute; left: 0; top: 0;}
+	#proyect_2 .mediano div.logotipo{width: 60%; margin-left: 20%;}
+	#proyect_2 .mediano .logotipo img{width: 70%; margin-left: 15%;margin-top: 40%;}
+
+
+	#proyect .chico {position:relative; -webkit-transition: all .25s ease-in-out; overflow: hidden; width: 100%; border-radius: 10px; height: 200px; margin-top: 20px; margin-bottom: 20px;}
+	#proyect .mediano {position:relative; -webkit-transition: all .25s ease-in-out; overflow: hidden; width: 100%; border-radius: 10px; height: 310px;margin-top: 20px; margin-bottom: 20px;}
+	#proyect .grande {position:relative; -webkit-transition: all .25s ease-in-out; overflow: hidden; width: 100%; border-radius: 10px; height: 420px;margin-top: 20px; margin-bottom: 20px;}
+
+
+	#proyect .chico img,#proyect .mediano img,#proyect .grande img {width: 100%; position: absolute; left: 0; top: 0;}
+	#proyect .chico div.logotipo,#proyect .mediano div.logotipo,#proyect .grande div.logotipo {width: 60%; margin-left: 20%;}
+	
+	#proyect .chico .logotipo img {width: 70%; margin-left: 15%;margin-top: 20%;}
+	#proyect .mediano .logotipo img{width: 70%; margin-left: 15%;margin-top: 40%;}
+	#proyect .grande .logotipo img{width: 70%; margin-left: 15%;margin-top: 60%;}
+
+
+	#info_wb {display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: space-around;  align-items: center;
+		-webkit-transition: all .25s ease-in-out; border-radius: 10px; opacity: 0; transform: scale(0.7); width: 100%; height: 100%; background-color: #0198ff; padding: 10px; font-size: 0.8rem; color: white;}
+
+	#info_wb ul { margin-top:0;  margin-bottom: 0;list-style: none;padding-left: 0; }
+	#info_wb ul li{text-decoration: none; list-style: none; text-align: center; }
+	#info_wb ul li.empresa2018{font-weight: 700; font-size: 1.05rem; text-align: center;  margin-bottom: 0px;margin-top: 0px; color: white;}
+	#info_wb ul li span {font-size: 1.7rem; color: white; font-weight: 400;}
+
+
+	#info_wb ul li.boton{margin-top: 55px;}
+
+	#info_wb p {line-height: 1.1rem;}
+
+
+	.chico:hover #info_wb {opacity: 1; transform: scale(1);}
+	.mediano:hover #info_wb {opacity: 1; transform: scale(1);}
+	.grande:hover #info_wb {opacity: 1; transform: scale(1);}
+/* ======= termina proyetos ===========*/
+
+
+/* ===== descripcion proyecto ========= */
+
+	#titulos_proyectos {overflow: hidden; margin-top: 140px; width: 100%; height: 250px; position: relative; color: white; }
+
+
+	.imagen_efecto_proyectos{transition: 9s; overflow: hidden; width: 100%; height:100%; position: absolute; left:0; top: 0; animation: moverNubes 15s linear infinite alternate ;}
+
+	.imagen_efecto_proyectos img {width: 100%; }
+
+	@keyframes moverNubes {
+
+		from {transform: scale(1.4);}
+
+		 to {transform: scale(1));}}
+
+
+	.logo_proyectos{width: 100%; height: 100%; display:flex; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row; justify-content: center; align-items: center;}
+
+	.logo_proyectos img {width: 20%;min-width: 272px; min-height: 132px; max-width: 408px; max-height: 200px;  }
+
+	.descripcion_proyectos {padding-top: 60px; padding-bottom: 60px; padding-right: 5%; padding-left: 5%; width: 100%;  display:flex; height: auto; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row ;align-items: center;justify-content: space-between; overflow: hidden; font-size: 0.9rem;text-align: justify;}
+
+	#vistas_admin {padding-top: 60px; padding-right: 5%; padding-left: 5%; width: 100%;  display:flex; height: auto; 
+	position: relative; display:-webkit-flex; display:-ms-flexbox; flex-wrap: wrap;font-weight: 400;
+	flex-direction: row ;align-items: center;justify-content: space-between; overflow: hidden; font-size: 0.9rem;text-align: justify;}
+
+	#vistas_admin img{width:75%; transition: 0.4s ease-in-out	;margin:0 auto; margin-bottom:120px;
+	 -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -8px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(250, 250, 250, 0), 0 0 40px rgba(250, 250, 250, 0) inset;
+    box-shadow: 0 15px 10px -8px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(250, 250, 250, 0), 0 0 40px rgba(250, 250, 250, 0) inset;  }
+
+    #vistas_admin img:hover {transform: 	scale(	1.05); transition: 0.4s ease-in-out	;}
+
+
+
+	#proyectos_100 h2{width: 100%;font-size: 2.8rem;font-weight: 400;
+    margin-bottom: 10px;text-align: left;margin-top: 0;color: #1f1f1f; margin-bottom: 0px;}
+   #proyectos_100 h2 span{font-weight: 600;}
+   #proyectos_100 p{width: 100%; max-width: 650px;margin-bottom: 30px; margin-top: 20px;}
+   #proyectos_100 img {width: 100%;}
+
+   	#proyectos_100{width: 100%; position: relative;margin-bottom: 0px;}
+	#proyectos_40{width: 40%;position: relative;}
+	#proyectos_60{width: 50%;position: relative;}
+	#proyectos_60 img{width: 100%; }
+
+
+	#proyectos_40 h2 {width: 100%;font-size: 3rem;font-weight: 400;
+    margin-bottom: 10px;text-align: center;margin-top: 0;}
+    #proyectos_40 h2 span{font-weight: 600;}
+    #proyectos_40 p{text-align: justify; margin-top: 0; margin-bottom:30px; font-size: 0.9rem; color: #1f1f1f; font-weight: 400;  margin-top: 0;}
+    #proyectos_40 p a{font-weight: 600; color: white; padding: 10px; background-color: #0198ff; transition: 0.4s ease-in-out;}	
+    #proyectos_40 p a:hover{background-color:#005c9b;  transition: 0.4s ease-in-out;}
+    #proyectos_40 ul {padding-left: 0; padding-right: 0;}
+    #proyectos_40 ul li {font-size: 0.9rem; margin-bottom: 10px; list-style: none;}
+    #proyectos_40 ul li span {margin-right: 5px; color: #df4312;}
+    #video{overflow: hidden; position: absolute;z-index: 45; width: 71%; height: 79.5%; background-color: yellow; top: 4%; left: 14%;}
+
+    #video img{width:100%;animation: videito 10s linear infinite alternate;}
+
+    @keyframes videito {
+		0% {
+			transform: translateY(0px);
+		}
+
+		20% {
+			transform: translateY(0px);
+		}
+
+		50% {
+			transform: translateY(-60px);
+		}
+
+		100% {
+			transform: translateY(-120px);
+		}
+
+
+	}
+
+
+
+
+/* ======= incia titulos principales===========*/
+	#img_principales {width: 100%; height: 350px; overflow: hidden; position: relative; background: #DF4312; /* For browsers that do not support gradients */background: -webkit-linear-gradient(left, #F29200 , #DF4312); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #F29200, #DF4312); /* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #F29200, #DF4312); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #F29200 , #DF4312); /* Standard syntax */margin-top: 89px; }
+
+	#img_principales img{width: 80%; position: absolute; top: 80px; margin-left: 10%; }
+/* ======= termina titulos principales ==========*/
+
+
+#mas_proyectos {width: 100%; padding: 60px 10%; color: #df4312; font-size: 1.3rem; text-align: center; font-weight: 600; margin-top: 0;}
+
+h2#mas_asociacion {width: 100%; padding: 0px 10%; color: #d5d5d5; font-size: 2rem; text-align: center; margin-top: 0; font-weight: 400;}
+h2#mas_asociacion span {font-weight: 600;}
+
+
+
+
+aside.parallax {overflow: hidden;background-position: center top; background-attachment: fixed; right: 0; background-repeat: no-repeat; background-size: cover; height: auto;margin: 0 auto;  overflow: hidden; padding: 0; position: relative; width: 100% !important; padding-bottom: 20px;}
+
+#bloque1 {background-image: url("../img/slider.jpg");overflow: hidden;}
+
+#wrapper {margin: 0 auto;width: 100% !important;overflow: hidden;
+position: relative;margin-top: 140px;}
+
+#wrapper .slider_img{position: relative; top: 12px; left: 0;}
+#wrapper .slider_img img{width: 100%;}
+
+#sld_2{display: none;}
+#sld_3{display: none;}
+
+/* PROYECTOS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= RESPONSIVE ==========*/
+
+	@media screen and (max-width: 1350px) {
+
+		.services{padding: 60px 5%;}
+		#estructura_b {padding: 60px 5% 60px 5%;}
+		#estructura_a{padding: 60px 5% 0px 5%;}
+		#proyectos{padding: 60px 10%;}
+		
+
+	}
+
+
+	@media screen and (max-width: 1200px) {
+
+		.service{width: 48%; margin-bottom: 30px;}
+		#proyectos{padding: 60px 5%;}
+		.sub_servicios {width: 32%;}
+
+	}
+
+	@media screen and (max-width: 1060px) {
+
+
+		div#mapa img{min-height: 545px; min-width: 1060px; }
+	}
+			
+
+
+	@media screen and (max-width: 1000px) {
+
+		div#head nav { display: none;}
+		div#head .logo{width: 100%;}
+		#estructura_b #b_1{width: 100%; margin-top: 60px;}
+		#estructura_a p{margin-bottom: 0px;}
+		section.franja{padding: 20px 5%;}
+		#raya{margin-bottom: 20px;}
+		#primera_estructura{flex-direction: row-reverse;}
+		#estructura_b #b_1 p{margin-bottom: 40px; }
+		#circulo_2017 img {width: 100%; margin-left: 0;}
+		#primera_a_img {display: none;}
+		#primera_a_parrafo {width: 100%;}
+		#setenta{width: 50%;}
+		#treinta{width: 40%;}
+	
+		.servicios_4 .sub_menu {width: 100%;height: auto;}
+		.sub_menu .sub_botones{width: 100%; height: auto;padding: 10px; } 
+		.servicios_4 .sub_datos{width: 100%;}
+		.servicios_4{flex-direction:row-reverse; height: auto;}
+
+		.sub_datos .sub_img{width: 100%; height: 150px; }
+		.sub_datos .sub_info{width: 100%; height: auto;}
+
+		.imagen_larga{display: none;}
+
+		.sub_menu .sub_botones h2 {font-size: 0.8rem;}
+
+		.sub_menu .botones_3{height: auto;padding: 10px;width: 100%;}
+		.sub_menu .botones_3 h2 {font-size: 0.8rem;}
+		#mas {display: none;}
+		.sub_menu .botones_3:hover{padding-top: 10px;}
+
+
+
+
+	}
+
+
+	@media screen and (max-width: 900px) {
+
+		div#head nav { display: none;}
+		#estructura_b #b_1{width: 100%; margin-top: 60px;}
+		#estructura_a p{margin-bottom: 0px;}
+		section.franja{padding: 20px 5%;}
+		#raya{margin-bottom: 20px;}
+		#proyect{width: 32%;}
+		.sub_servicios {width: 40%;}
+		#mas_servicios{width: 51%; margin-bottom: 30px;}
+		.formulario_2017{padding-left: 5%;}
+		.franja_datos{padding-right: 5%;}
+		#proyectos_40{width: 100%; }
+		#proyectos_40 p{text-align: center; margin-top: 20px;}
+		#proyectos_40 p a{padding: 5px;}
+		#proyectos_60 {width: 70%;}
+		.descripcion_proyectos{justify-content: center;}
+		#proyectos_100 p {max-width: 100%;}
+		#proyectos_100 h2 {font-size: 2.3rem;}
+		#treinta{width: 100%;}
+		#setenta{width: 100%;margin-top: 40px;}
+		#estructura_nosotros{justify-content: center;}
+		#vistas_admin img{width: 85%;margin-bottom: 60px;}
+		#vistas_admin{padding-top: 30px;}
+		#proyectos_40 ul{margin-top: 30px}
+
+
+	}
+
+	@media screen and (max-width: 800px) {
+
+		#proyect{width: 100%;}
+		#mas_servicios{width: 70%;}
+		#proyect .chico .logotipo img , #proyect .mediano .logotipo img, #proyect .grande .logotipo img{margin-top: 9%;}
+		#proyect .chico, #proyect .grande, #proyect .mediano{height: 350px;}
+		#proyect_2 .mediano{width: 100%;}
+		#proyect_2 .mediano .logotipo img{margin-top: 5%;}
+
+
+
+	}
+
+
+
+
+	@media screen and (max-width: 750px) {
+
+		.service{width: 100%; height: auto;}
+		#titulos_principales h2 { font-size: 1.8rem;margin-top: 48px;}
+		.sub_servicios {width: 100%; height: 150px;}
+		#mas_servicios{width: 100%;}
+		.descripcion_proyectos{padding: 30px 5%;}
+		div#mapa{height: 250px;}
+		#titulos_principales{height: 180px;margin-top: 125px;}
+		#titulos_proyectos{height: 180px;}
+		#primera_estructura {padding: 30px 5%;}
+		#estructura_nosotros{padding: 30px 5%;}
+		#proyectos{padding: 30px 5%;}
+		h2#mas_asociacion{font-size: 1.4rem;}
+		.logo_proyectos img{min-width: 195px; min-height: 96px;}
+		.formulario_2017{width: 100%; padding: 60px 5%;}
+		.franja_datos{width: 100%; padding: 0px 5%;}
+		.franja_datos div{width: 50%; text-align: center;}
+		.contact section.contact_form {background-size: 200%;}
+
+
+	}
+
+	@media screen and (max-width: 650px) {
+
+		section.franja h2{font-size: 1rem;}
+		.wrap{padding: 15px;}
+		#proyectos_100 h2 {font-size: 1.4rem; text-align: center;}
+		#proyectos_60{width: 100%;}
+		.img_franja{display: none;}
+		#vistas_admin img{width: 100%;margin-bottom: 60px;}
+		h2#mas_asociacion{font-size: 1.2rem;}
+		#proyect_2 .mediano{height: 350px;}
+		#proyect_2 .mediano .logotipo img{margin-top: 9%;}
+		#proyect .chico .logotipo img , #proyect .mediano .logotipo img, #proyect .grande .logotipo img{margin-top: 9%;}
+		
+		#proyect .chico, #proyect .grande, #proyect .mediano{height: 350px;}
+		.logo_proyectos img{min-width: 195px; min-height: 96px;}
+		#titulos_principales h2 {font-size: 1.5rem; margin-top: 36px;}
+		
+		.franja_datos div{width: 100%;}
+		footer .redes{width: 100%; text-align: center; padding-left: 5%; padding-right: 5%;}
+		footer .redes ul li{display: inline-block;width: 23%; text-align: center;}
+		.sub_datos .sub_img h2{font-size: 1.1rem;line-height: 1.8rem;}
+
+	}
+
+
+	@media screen and (max-width: 520px) {
+
+		section.contact{padding: 0;}
+		#proyect .chico .logotipo img , #proyect .mediano .logotipo img, #proyect .grande .logotipo img{margin-top: 9%;}
+		#proyect .chico, #proyect .grande, #proyect .mediano{height: 250px;}
+		#proyect_2 .mediano{height: 250px;}
+		#proyect_2 .mediano .logotipo img{margin-top: 15%;}
+
+		.cir_central{padding-top: 140px; padding-bottom: 140px;}
+	}
+
+
+
+	@media screen and (max-width: 380px) {
+
+		.cir_central{padding-top: 112px; padding-bottom: 112px;}
+	}
+
+
+
+	@media screen and (max-width: 350px) {
+
+		#proyect .chico, #proyect .grande, #proyect .mediano{height: 150px;}
+		#proyect .chico .logotipo img , #proyect .mediano .logotipo img, #proyect .grande .logotipo img{width: 70%; margin-left: 15%;margin-top: 12%;} 
+	}
+
+	@media screen and (min-width: 999px) {
+
+		
+		.menu_responsive{display: none;}
+	}
